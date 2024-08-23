@@ -98,7 +98,7 @@ public class CrptApi {
         @JsonProperty("doc_status")
         private String docStatus;
         @JsonProperty("doc_type")
-        private String docType;
+        private DocType docType;
         @JsonProperty("importRequest")
         private boolean importRequest;
         @JsonProperty("owner_inn")
@@ -136,11 +136,11 @@ public class CrptApi {
             this.docStatus = docStatus;
         }
 
-        public String getDocType() {
+        public DocType getDocType() {
             return docType;
         }
 
-        public void setDocType(String docType) {
+        public void setDocType(DocType docType) {
             this.docType = docType;
         }
 
@@ -332,5 +332,9 @@ public class CrptApi {
         public void setUituCode(String uituCode) {
             this.uituCode = uituCode;
         }
+    }
+
+    public enum DocType {
+        LP_INRODUCE_GOODS
     }
 }
